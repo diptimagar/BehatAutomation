@@ -1,0 +1,15 @@
+default:
+    suites:
+        core_features:
+            paths:
+                - %paths.base%/features
+            contexts:
+            - FeatureContext:
+                - http://10.122.6.17:8090/repurposing-tool/web/app_dev.php/login			
+    extensions:
+        Behat\MinkExtension:
+            sessions:
+              default:
+                selenium2:
+				
+                   

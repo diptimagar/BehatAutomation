@@ -1,0 +1,44 @@
+[1mFeature:[22m Login rTool
+
+  [36m@rTool_Successful_login_admin[39m
+  [1mScenario:[22m Successful Login rTool for Admin                                                 [30m# features\rToolLogin.feature:4[39m
+    [32mGiven I am on rtool login page[39m                                                           [30m# FeatureContext::iAmOnRtoolLoginPage()[39m
+    [32mThen I enter username "[39m[32;1madmin[39;22m[32m"[39m                                                            [30m# FeatureContext::iEnterUsername()[39m
+    [32mAnd I enter Password "[39m[32;1mtest[39;22m[32m"[39m                                                              [30m# FeatureContext::iEnterPassword()[39m
+    [32mWhen I click on Login button[39m                                                             [30m# FeatureContext::iClickOnLoginButton()[39m
+    [32mThen I see the page "[39m[32;1mhttp://10.122.6.17:8090/repurposing-tool/web/app_dev.php/dashboard[39;22m[32m"[39m [30m# FeatureContext::iSeeThePage()[39m
+    [32mThen I log out[39m                                                                           [30m# FeatureContext::iLogOut()[39m
+    [32mThen I close the browser[39m                                                                 [30m# FeatureContext::iCloseTheBrowser()[39m
+
+  [36m@rTool_Successful_login_user[39m
+  [1mScenario:[22m Successful Login rTool for User                                                       [30m# features\rToolLogin.feature:14[39m
+    [32mGiven I am on rtool login page[39m                                                                [30m# FeatureContext::iAmOnRtoolLoginPage()[39m
+    [32mThen I enter username "[39m[32;1muser[39;22m[32m"[39m                                                                  [30m# FeatureContext::iEnterUsername()[39m
+    [32mAnd I enter Password "[39m[32;1mtest[39;22m[32m"[39m                                                                   [30m# FeatureContext::iEnterPassword()[39m
+    [32mWhen I click on Login button[39m                                                                  [30m# FeatureContext::iClickOnLoginButton()[39m
+    [32mThen I see the page "[39m[32;1mhttp://10.122.6.17:8090/repurposing-tool/web/app_dev.php/user/dashboard[39;22m[32m"[39m [30m# FeatureContext::iSeeThePage()[39m
+    [32mThen I log out[39m                                                                                [30m# FeatureContext::iLogOut()[39m
+    [32mThen I close the browser[39m                                                                      [30m# FeatureContext::iCloseTheBrowser()[39m
+
+  [36m@rTool_Login_Validations_Blank_username_and_Password[39m
+  [1mScenario:[22m rTool_login_PageValidations             [30m# features\rToolLogin.feature:24[39m
+    [32mGiven I am on rtool login page[39m                  [30m# FeatureContext::iAmOnRtoolLoginPage()[39m
+    [32mThen I enter username "[39m[32;1m[39;22m[32m"[39m                        [30m# FeatureContext::iEnterUsername()[39m
+    [32mAnd I enter Password "[39m[32;1m[39;22m[32m"[39m                         [30m# FeatureContext::iEnterPassword()[39m
+    [32mWhen I click on Login button[39m                    [30m# FeatureContext::iClickOnLoginButton()[39m
+    [32mThen I See errormessage "[39m[32;1mUsername is mandatory[39;22m[32m"[39m [30m# FeatureContext::iSeeErrormessage()[39m
+    [32mThen I See errormessage "[39m[32;1mPassword is mandatory[39;22m[32m"[39m [30m# FeatureContext::iSeeErrormessage()[39m
+    [32mThen I close the browser[39m                        [30m# FeatureContext::iCloseTheBrowser()[39m
+
+  [36m@rTool_Login_Validations_InvalidUserNameorPassword[39m
+  [1mScenario:[22m rTool_login_PageValidations                               [30m# features\rToolLogin.feature:34[39m
+    [32mGiven I am on rtool login page[39m                                    [30m# FeatureContext::iAmOnRtoolLoginPage()[39m
+    [32mThen I enter username "[39m[32;1madmin[39;22m[32m"[39m                                     [30m# FeatureContext::iEnterUsername()[39m
+    [32mAnd I enter Password "[39m[32;1m123434[39;22m[32m"[39m                                     [30m# FeatureContext::iEnterPassword()[39m
+    [32mWhen I click on Login button[39m                                      [30m# FeatureContext::iClickOnLoginButton()[39m
+    [32mThen I See errormessage "[39m[32;1mIncorrect Username Password Combination[39;22m[32m"[39m [30m# FeatureContext::iSeeErrormessage()[39m
+    [32mThen I close the browser[39m                                          [30m# FeatureContext::iCloseTheBrowser()[39m
+
+4 scenarios ([32m4 passed[39m)
+27 steps ([32m27 passed[39m)
+1m0.21s (9.23Mb)
